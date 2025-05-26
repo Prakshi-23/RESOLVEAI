@@ -78,6 +78,8 @@ CREATE TABLE IF NOT EXISTS complaints (
     Followup TEXT,
     Admin_note TEXT
 
+);
+
 -- Simplified Customers Table
 CREATE TABLE IF NOT EXISTS customers (
     customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -93,7 +95,6 @@ CREATE TABLE IF NOT EXISTS admins (
 );
 
 
-);
 ```
 
 ---
