@@ -14,7 +14,7 @@ st.markdown(hide_menu, unsafe_allow_html=True)
 
 # --- 1. Groq Model Initialization ---
 model = ChatGroq(
-    groq_api_key="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",
+    #groq_api_key="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",
     model_name="gemma2-9b-it"
 )
 
