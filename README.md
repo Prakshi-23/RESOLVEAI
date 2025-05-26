@@ -58,7 +58,7 @@ Final AI CCR/
 ├── venv/                      # Virtual environment
 └── improved_complaint_classifier_training.ipynb
 ```
-
+## Note: REQuIRES MYSQL CONNECTION
 
 ## Database Schema
 
