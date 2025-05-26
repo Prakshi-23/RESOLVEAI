@@ -72,7 +72,7 @@ print("3")
 
 # Load LLM
 model = ChatGroq(
-    groq_api_key="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",
+    #groq_api_key="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",
     model_name="gemma2-9b-it")
 print("loading model")
 
