@@ -1,0 +1,16 @@
+pymysql
+streamlit==1.33.0
+pandas>=2.2.1,<2.3
+scikit-learn==1.4.2
+joblib==1.4.2
+numpy==1.26.4
+regex==2024.4.16
+torch
+transformers
+scipy
+langchain
+langchain-community
+langchain-huggingface
+langchain-core
+langchain-groq
+faiss-cpu
