@@ -8,7 +8,7 @@ from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, HumanMess
 from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain.docstore.document import Document
+from langchain_core.documents import Document
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from scipy.special import softmax
