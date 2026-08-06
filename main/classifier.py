@@ -90,7 +90,7 @@ vector_store = FAISS.load_local(
 retriever = vector_store.as_retriever()
 
 # Load classifier (trained on HuggingFace embeddings)
-classifier = joblib.load(r"main\complaint_classifier.pkl")
+classifier = joblib.load("main\complaint_classifier.pkl")
 print("3")
 
 # Load LLM
