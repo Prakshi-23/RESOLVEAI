@@ -102,9 +102,23 @@ classifier = joblib.load(MODEL_PATH)
 print("3")
 
 # Load LLM
+# model = ChatGroq(
+#     #groq_api_key="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",
+#     model_name="gemma2-9b-it")
+# print("loading model")
+
+import os
+import streamlit as st
+from langchain_groq import ChatGroq
+
+# Get API key from Streamlit secrets or OS environment variables
+groq_key = st.secrets.get("GROQ_API_KEY") or os.environ.get("GROQ_API_KEY")
+
+# Initialize ChatGroq model
 model = ChatGroq(
-    #groq_api_key="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",
-    model_name="gemma2-9b-it")
+    groq_api_key=groq_key,
+    model_name="gemma2-9b-it"
+)
 print("loading model")
 
 def clean_text(text):
