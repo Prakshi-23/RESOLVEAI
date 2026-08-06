@@ -38,10 +38,20 @@ def get_sentiment(text):
     return urgency, sentiment_score
 
 # Read CSV
-df = pd.read_csv(r'data\realistic_complaints_dataset_9990_cleaned.csv')
+import os
+from pathlib import Path
+
+# Get absolute path relative to the current file location
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "data" / "realistic_complaints_dataset_9990_cleaned.csv"
+
+df = pd.read_csv(DATA_PATH)
 df.to_csv('data.txt', index=False)
 
-with open("data.txt", "r") as file:
+TEMP_FILE = BASE_DIR / "data.txt"
+df.to_csv(TEMP_FILE, index=False)
+
+with open(TEMP_FILE, "r") as file:
     content = file.read()
 
 doc = Document(page_content=content)
