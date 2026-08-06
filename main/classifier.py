@@ -90,7 +90,15 @@ vector_store = FAISS.load_local(
 retriever = vector_store.as_retriever()
 
 # Load classifier (trained on HuggingFace embeddings)
-classifier = joblib.load("main\complaint_classifier.pkl")
+# classifier = joblib.load("main\complaint_classifier.pkl")
+import os
+import joblib
+
+# Dynamically locate the directory where classifier.py resides
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "complaint_classifier.pkl")
+
+classifier = joblib.load(MODEL_PATH)
 print("3")
 
 # Load LLM
