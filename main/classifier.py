@@ -85,7 +85,7 @@ vector_store = FAISS.load_local(
     allow_dangerous_deserialization=True
 )
 # vector_store = FAISS.load_local("faiss_index", embedding_model, allow_dangerous_deserialization=True)
-
+print("2")
 # Get retriever
 retriever = vector_store.as_retriever()
 
