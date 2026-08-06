@@ -51,7 +51,7 @@ st.markdown("Type your complaint below and get a smart AI-powered response:")
 
 # --- Insert Complaint to DB ---
 def insert_complaint_mysql(customer_id, complaint, category, response, urgency, followup):
-    conn = pymysql.connect(host="localhost", user="root", password="root", database="ai_complaint_responder")
+    conn = pymysql.connect(host="localhost", user="root", password="1q2w", database="ai_complaint_responder")
     cursor = conn.cursor()
     query = """INSERT INTO complaints 
                (C_id, Complaint_text, Predicted_category, Auto_response, Urgency, Followup) 
