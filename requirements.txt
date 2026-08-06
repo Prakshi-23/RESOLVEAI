@@ -14,3 +14,4 @@ langchain-huggingface
 langchain-core
 langchain-groq
 faiss-cpu
+matplotlib
