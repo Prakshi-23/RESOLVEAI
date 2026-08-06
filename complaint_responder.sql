@@ -30,7 +30,7 @@ update complaints set Predicted_category = "Customer Support" where Predicted_ca
 
 
 -- Technical Issue', 'Payment Issue', 'Account Issue',
-   --     'Delivery Delay', 'Service Issue', 'Product Damage',
-      --  'Login Trouble', 'App Bug', 'Wrong Item', 'Customer Support'
-      
-      select * from complaints where Predicted_category="Customer support";
+--     'Delivery Delay', 'Service Issue', 'Product Damage',
+--  'Login Trouble', 'App Bug', 'Wrong Item', 'Customer Support'
+
+select * from complaints where Predicted_category="Customer support";
