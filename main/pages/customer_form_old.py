@@ -60,6 +60,7 @@ def insert_complaint_mysql(customer_id, complaint, category, response, urgency, 
     conn.commit()
     conn.close()
 
+
 # --- Complaint Form ---
 with st.form("complaint_form"):
     complaint_text = st.text_area("Describe your issue")
