@@ -71,7 +71,20 @@ print("1")
 # print("Initialize embeddings and vector store")
 
 # Load the saved FAISS vector store
-vector_store = FAISS.load_local("faiss_index", embedding_model, allow_dangerous_deserialization=True)
+import os
+from pathlib import Path
+
+# Get directory where classifier.py resides
+BASE_DIR = Path(__file__).resolve().parent
+INDEX_PATH = BASE_DIR / "faiss_index"
+
+# Load FAISS index dynamically
+vector_store = FAISS.load_local(
+    folder_path=str(INDEX_PATH), 
+    embeddings=embedding_model, 
+    allow_dangerous_deserialization=True
+)
+# vector_store = FAISS.load_local("faiss_index", embedding_model, allow_dangerous_deserialization=True)
 
 # Get retriever
 retriever = vector_store.as_retriever()
