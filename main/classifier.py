@@ -111,10 +111,12 @@ import os
 import streamlit as st
 from langchain_groq import ChatGroq
 
-# Get API key from Streamlit secrets or OS environment variables
+# Retrieve key from secrets or environment
 groq_key = st.secrets.get("GROQ_API_KEY") or os.environ.get("GROQ_API_KEY")
 
-# Initialize ChatGroq model
+if not groq_key:
+    st.error("GROQ_API_KEY is missing! Please configure it in Streamlit Secrets.")
+
 model = ChatGroq(
     groq_api_key=groq_key,
     model_name="gemma2-9b-it"
